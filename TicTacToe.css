@@ -1,0 +1,152 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: radial-gradient(circle, #283E51, #0A2342);
+    color: #F7F9FA;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px #000;
+    color: #FFD700;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation for Header */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Game Board Styling */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    background-color: #1E3D59;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Box Styling */
+.box {
+    height: 100px;
+    width: 100px;
+    border-radius: 1rem;
+    border: 2px solid #F7F9FA;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    background-color: #4C7EAA;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover Effect for Boxes */
+.box:hover {
+    background-color: #5B9BD5;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Disabled Boxes */
+.box:disabled {
+    background-color: #1E3D59;
+    cursor: not-allowed;
+}
+
+/* Button Styling */
+#reset-btn, #new-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: #1C2A37;
+    color: #FFD700;
+    border-radius: 0.75rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect for Buttons */
+#reset-btn:hover, #new-btn:hover {
+    background-color: #2A475E;
+    transform: translateY(-3px);
+}
+
+/* Message Styling */
+#msg {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+#draw {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Message Container Styling */
+.msg-container {
+    background-color: #1E3D59;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hide Class */
+.hide {
+    display: none;
+}
